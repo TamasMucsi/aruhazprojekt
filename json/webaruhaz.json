@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "marka": "Nike",
+        "szin": "Fehér",
+        "meret": "42",
+        "tipus": "Férfi",
+        "ar": 38990
+    },
+    {
+        "id": 2,
+        "marka": "Adidas",
+        "szin": "Fekete",
+        "meret": "38",
+        "tipus": "Nő",
+        "ar": 29500
+    },
+    {
+        "id": 3,
+        "marka": "Puma",
+        "szin": "Sötétkék",
+        "meret": "44",
+        "tipus": "Férfi",
+        "ar": 22900
+    },
+    {
+        "id": 4,
+        "marka": "Reebok",
+        "szin": "Szürke",
+        "meret": "37",
+        "tipus": "Nő",
+        "ar": 18500
+    },
+    {
+        "id": 5,
+        "marka": "Skechers",
+        "szin": "Rózsaszín",
+        "meret": "39",
+        "tipus": "Nő",
+        "ar": 24990
+    },
+    {
+        "id": 6,
+        "marka": "New Balance",
+        "szin": "Bézs",
+        "meret": "43",
+        "tipus": "Férfi",
+        "ar": 42000
+    },
+    {
+        "id": 7,
+        "marka": "Converse",
+        "szin": "Piros",
+        "meret": "40",
+        "tipus": "Férfi",
+        "ar": 21000
+    },
+    {
+        "id": 8,
+        "marka": "Vans",
+        "szin": "Kockás",
+        "meret": "36",
+        "tipus": "Nő",
+        "ar": 23500
+    },
+    {
+        "id": 9,
+        "marka": "Asics",
+        "szin": "Neonzöld",
+        "meret": "45",
+        "tipus": "Férfi",
+        "ar": 45900
+    },
+    {
+        "id": 10,
+        "marka": "Timberland",
+        "szin": "Barna",
+        "meret": "41",
+        "tipus": "Férfi",
+        "ar": 62000
+    },
+    {
+        "id": 11,
+        "marka": "Fila",
+        "szin": "Fehér",
+        "meret": "38",
+        "tipus": "Nő",
+        "ar": 27900
+    },
+    {
+        "id": 12,
+        "marka": "Under Armour",
+        "szin": "Fekete",
+        "meret": "46",
+        "tipus": "Férfi",
+        "ar": 33500
+    },
+    {
+        "id": 13,
+        "marka": "Jordan",
+        "szin": "Piros-Fekete",
+        "meret": "42",
+        "tipus": "Férfi",
+        "ar": 54900
+    },
+    {
+        "id": 14,
+        "marka": "Salomon",
+        "szin": "Terepszín",
+        "meret": "43",
+        "tipus": "Férfi",
+        "ar": 48000
+    },
+    {
+        "id": 15,
+        "marka": "Lacoste",
+        "szin": "Sötétkék",
+        "meret": "40",
+        "tipus": "Nő",
+        "ar": 31000
+    },
+    {
+        "id": 16,
+        "marka": "Birkenstock",
+        "szin": "Taupe",
+        "meret": "37",
+        "tipus": "Nő",
+        "ar": 39900
+    },
+    {
+        "id": 17,
+        "marka": "Dr. Martens",
+        "szin": "Bordó",
+        "meret": "39",
+        "tipus": "Nő",
+        "ar": 68000
+    },
+    {
+        "id": 18,
+        "marka": "Hummel",
+        "szin": "Kék-Fehér",
+        "meret": "41",
+        "tipus": "Férfi",
+        "ar": 19500
+    },
+    {
+        "id": 19,
+        "marka": "Clarks",
+        "szin": "Homokszín",
+        "meret": "42",
+        "tipus": "Férfi",
+        "ar": 35900
+    },
+    {
+        "id": 20,
+        "marka": "Tamaris",
+        "szin": "Ezüst",
+        "meret": "38",
+        "tipus": "Nő",
+        "ar": 22500
+    }
+]
