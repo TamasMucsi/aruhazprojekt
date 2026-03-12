@@ -2,6 +2,7 @@
     {
         "id": 1,
         "marka": "Nike",
+        "modell": "Air Force 1",
         "szin": "Fehér",
         "meret": "42",
         "tipus": "Férfi",
@@ -10,6 +11,7 @@
     {
         "id": 2,
         "marka": "Adidas",
+        "modell": "Stan Smith",
         "szin": "Fekete",
         "meret": "38",
         "tipus": "Nő",
@@ -18,6 +20,7 @@
     {
         "id": 3,
         "marka": "Puma",
+        "modell": "Smash v2",
         "szin": "Sötétkék",
         "meret": "44",
         "tipus": "Férfi",
@@ -26,6 +29,7 @@
     {
         "id": 4,
         "marka": "Reebok",
+        "modell": "Royal Glide",
         "szin": "Szürke",
         "meret": "37",
         "tipus": "Nő",
@@ -34,6 +38,7 @@
     {
         "id": 5,
         "marka": "Skechers",
+        "modell": "Graceful - Get Connected",
         "szin": "Rózsaszín",
         "meret": "39",
         "tipus": "Nő",
@@ -42,6 +47,7 @@
     {
         "id": 6,
         "marka": "New Balance",
+        "modell": "574 Core",
         "szin": "Bézs",
         "meret": "43",
         "tipus": "Férfi",
@@ -50,6 +56,7 @@
     {
         "id": 7,
         "marka": "Converse",
+        "modell": "Chuck Taylor All Star Hi",
         "szin": "Piros",
         "meret": "40",
         "tipus": "Férfi",
@@ -58,6 +65,7 @@
     {
         "id": 8,
         "marka": "Vans",
+        "modell": "Classic Slip-On",
         "szin": "Kockás",
         "meret": "36",
         "tipus": "Nő",
@@ -66,6 +74,7 @@
     {
         "id": 9,
         "marka": "Asics",
+        "modell": "Gel-Kayano 29",
         "szin": "Neonzöld",
         "meret": "45",
         "tipus": "Férfi",
@@ -74,6 +83,7 @@
     {
         "id": 10,
         "marka": "Timberland",
+        "modell": "6-Inch Premium Boot",
         "szin": "Barna",
         "meret": "41",
         "tipus": "Férfi",
@@ -82,6 +92,7 @@
     {
         "id": 11,
         "marka": "Fila",
+        "modell": "Disruptor II",
         "szin": "Fehér",
         "meret": "38",
         "tipus": "Nő",
@@ -90,6 +101,7 @@
     {
         "id": 12,
         "marka": "Under Armour",
+        "modell": "Hovr Phantom 3",
         "szin": "Fekete",
         "meret": "46",
         "tipus": "Férfi",
@@ -98,6 +110,7 @@
     {
         "id": 13,
         "marka": "Jordan",
+        "modell": "Air Jordan 1 Mid",
         "szin": "Piros-Fekete",
         "meret": "42",
         "tipus": "Férfi",
@@ -106,6 +119,7 @@
     {
         "id": 14,
         "marka": "Salomon",
+        "modell": "Speedcross 6",
         "szin": "Terepszín",
         "meret": "43",
         "tipus": "Férfi",
@@ -114,6 +128,7 @@
     {
         "id": 15,
         "marka": "Lacoste",
+        "modell": "Carnaby Evo",
         "szin": "Sötétkék",
         "meret": "40",
         "tipus": "Nő",
@@ -122,6 +137,7 @@
     {
         "id": 16,
         "marka": "Birkenstock",
+        "modell": "Boston SFB",
         "szin": "Taupe",
         "meret": "37",
         "tipus": "Nő",
@@ -130,6 +146,7 @@
     {
         "id": 17,
         "marka": "Dr. Martens",
+        "modell": "1460 Smooth",
         "szin": "Bordó",
         "meret": "39",
         "tipus": "Nő",
@@ -138,6 +155,7 @@
     {
         "id": 18,
         "marka": "Hummel",
+        "modell": "Stadil Light",
         "szin": "Kék-Fehér",
         "meret": "41",
         "tipus": "Férfi",
@@ -146,6 +164,7 @@
     {
         "id": 19,
         "marka": "Clarks",
+        "modell": "Desert Boot",
         "szin": "Homokszín",
         "meret": "42",
         "tipus": "Férfi",
@@ -154,6 +173,7 @@
     {
         "id": 20,
         "marka": "Tamaris",
+        "modell": "Pure Relax Sneaker",
         "szin": "Ezüst",
         "meret": "38",
         "tipus": "Nő",
