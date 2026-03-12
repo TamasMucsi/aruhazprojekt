@@ -39,7 +39,7 @@
         "id": 5,
         "marka": "Skechers",
         "modell": "Graceful - Get Connected",
-        "szin": "Rózsaszín",
+        "szin": "Fehér",
         "meret": "39",
         "tipus": "Nő",
         "ar": 24990
@@ -48,7 +48,7 @@
         "id": 6,
         "marka": "New Balance",
         "modell": "574 Core",
-        "szin": "Bézs",
+        "szin": "Fekete",
         "meret": "43",
         "tipus": "Férfi",
         "ar": 42000
@@ -66,7 +66,7 @@
         "id": 8,
         "marka": "Vans",
         "modell": "Classic Slip-On",
-        "szin": "Kockás",
+        "szin": "Fekete",
         "meret": "36",
         "tipus": "Nő",
         "ar": 23500
@@ -75,7 +75,7 @@
         "id": 9,
         "marka": "Asics",
         "modell": "Gel-Kayano 29",
-        "szin": "Neonzöld",
+        "szin": "Sötétkék",
         "meret": "45",
         "tipus": "Férfi",
         "ar": 45900
@@ -111,7 +111,7 @@
         "id": 13,
         "marka": "Jordan",
         "modell": "Air Jordan 1 Mid",
-        "szin": "Piros-Fekete",
+        "szin": "Piros",
         "meret": "42",
         "tipus": "Férfi",
         "ar": 54900
@@ -120,7 +120,7 @@
         "id": 14,
         "marka": "Salomon",
         "modell": "Speedcross 6",
-        "szin": "Terepszín",
+        "szin": "Szürke",
         "meret": "43",
         "tipus": "Férfi",
         "ar": 48000
@@ -138,7 +138,7 @@
         "id": 16,
         "marka": "Birkenstock",
         "modell": "Boston SFB",
-        "szin": "Taupe",
+        "szin": "Barna",
         "meret": "37",
         "tipus": "Nő",
         "ar": 39900
@@ -147,7 +147,7 @@
         "id": 17,
         "marka": "Dr. Martens",
         "modell": "1460 Smooth",
-        "szin": "Bordó",
+        "szin": "Piros",
         "meret": "39",
         "tipus": "Nő",
         "ar": 68000
@@ -156,7 +156,7 @@
         "id": 18,
         "marka": "Hummel",
         "modell": "Stadil Light",
-        "szin": "Kék-Fehér",
+        "szin": "Szürke",
         "meret": "41",
         "tipus": "Férfi",
         "ar": 19500
@@ -165,7 +165,7 @@
         "id": 19,
         "marka": "Clarks",
         "modell": "Desert Boot",
-        "szin": "Homokszín",
+        "szin": "Barna",
         "meret": "42",
         "tipus": "Férfi",
         "ar": 35900
