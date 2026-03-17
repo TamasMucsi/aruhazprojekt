@@ -26,7 +26,8 @@ function cipokmegjelenitese(){
     
     szurescipok.forEach(element => {
         const card = document.createElement("div");
-        card.classList = "col-sm-12 col-md-6 col-lg-3"
+        // card.classList = "col-sm-12 col-md-6 col-lg-3"
+        card.classList = "col-auto"
         card.innerHTML = `
             <div class="card h-100" style="width: 20rem;">
                 <img src="${element.kep}" class="card-img-top" alt="${element.kep}">
@@ -37,7 +38,7 @@ function cipokmegjelenitese(){
                     <p class="card-text">Típus: ${element.tipus}</p>
 
                     <h5 class="fw-bold">${element.ar} Ft</h5>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="#" class="btn btn-secondary">Kosárba</a>
                 </div>
             </div>`
         cipokcardok.appendChild(card)
