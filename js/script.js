@@ -1,5 +1,6 @@
 let cipok = [];
 let szurescipok = [];
+let kosarcipok = [];
 
 
 let cipokcardok = document.getElementById("cipokcardok")
@@ -15,7 +16,6 @@ async function cipokBetoltes() {
         szurescipok = [...cipok];
         cipokmegjelenitese();
         kategoriaMenuGeneralas();
-        console.log('Hibasssssssa történt a filmek betöltése során!')
     } catch (error) {
         console.log('Hiba történt a cipők betöltése során!')
     }
@@ -28,7 +28,7 @@ function cipokmegjelenitese(){
         const card = document.createElement("div");
         card.classList = "col-sm-12 col-md-6 col-lg-3"
         card.innerHTML = `
-            <div class="card" style="width: 20rem;">
+            <div class="card h-100" style="width: 20rem;">
                 <img src="${element.kep}" class="card-img-top" alt="${element.kep}">
                 <div class="card-body">
                     <h4 class="card-title">${element.marka}</h4>
