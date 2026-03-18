@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(252, 252, 252);
+}
+
+/* Navbar */
+
+.navbar{
+    background-color: rgb(255, 255, 255);
+}
+
+.nav-item{
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(114, 114, 114);
+    
+}
+
+.nav-item:hover{
+    color: rgb(0, 0, 0);
+    transition: 2s;
+    
+}
+
+footer{
+    background: rgb(158, 158, 158);
+    /* position: fixed; */
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    display: flex;
+}
+
+/* Főoldal */
+
+.fooldaldiv{
+    background-image: url('../img/fooldalkep.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    
+    
+}
