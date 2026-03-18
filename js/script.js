@@ -38,7 +38,7 @@ function cipokmegjelenitese(){
                     <p class="card-text">Típus: ${element.tipus}</p>
 
                     <h5 class="fw-bold">${element.ar} Ft</h5>
-                    <a href="#" class="btn btn-secondary">Kosárba</a>
+                    <a href="#" class="btn btn-secondary" id="kosarGomb">Kosárba</a>
                 </div>
             </div>`
         cipokcardok.appendChild(card)
