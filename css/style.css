@@ -37,6 +37,10 @@ footer{
     background-size: cover;
     background-position: center center;
     height: 500px;
-    
-    
+}
+
+.fooldalcim{
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
 }
