@@ -1,5 +1,15 @@
+:root{
+    --white: #ffffffff;
+    --ink-black: #00171fff;
+    --deep-space-blue: #003459ff;
+    --cerulean: #007ea7ff;
+    --fresh-sky: #00a8e8ff;
+}
+
+
+
 body{
-    background-color: rgb(252, 252, 252);
+    background-color: white;
 }
 
 /* Navbar */
@@ -37,10 +47,34 @@ footer{
     background-size: cover;
     background-position: center center;
     height: 500px;
+    
+    
 }
 
 .fooldalcim{
     color: white;
     font-size: 28px;
-    font-weight: bold;
+    font-weight: bold;    
+}
+
+
+.card-footer{
+    background-color: white;
+}
+
+#kosarGomb{
+    border-radius: 5px;
+    border-color: grey;
+    background-color: white;
+    height: 5rem;
+    font-size: larger;
+    width: 18rem;
+    text-align: center;
+    transition: background-color 0.5s;
+}
+#kosarGomb:hover{
+    background-color: lightgrey;
+}
+#kosarGomb:active{
+    background-color: grey;
 }
