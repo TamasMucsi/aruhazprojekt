@@ -15,7 +15,7 @@ async function cipokBetoltes() {
         cipok = await response.json();
         szurescipok = [...cipok];
         cipokmegjelenitese();
-        kategoriaMenuGeneralas();
+        kategoriakgeneralas();
     } catch (error) {
         console.log('Hiba történt a cipők betöltése során!')
     }
