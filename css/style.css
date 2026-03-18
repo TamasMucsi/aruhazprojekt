@@ -1,13 +1,3 @@
-:root{
-    --white: #ffffffff;
-    --ink-black: #00171fff;
-    --deep-space-blue: #003459ff;
-    --cerulean: #007ea7ff;
-    --fresh-sky: #00a8e8ff;
-}
-
-
-
 body{
     background-color: white;
 }
