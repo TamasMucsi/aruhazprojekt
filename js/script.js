@@ -31,14 +31,15 @@ function cipokmegjelenitese(){
         card.innerHTML = `
             <div class="card h-100" style="width: 20rem;">
                 <img src="${element.kep}" class="card-img-top" alt="${element.kep}">
-                <div class="card-body">
-                    <h4 class="card-title">${element.marka}</h4>
+                <div class="card-body"></div>
+                <div class="card-footer">
+                <h4 class="card-title">${element.marka}</h4>
                     <h6 class="fw-bold">${element.modell}</h6>
                     <p class="card-text">Szín: ${element.szin} | Méret: ${element.meret}</p>
                     <p class="card-text">Típus: ${element.tipus}</p>
 
                     <h5 class="fw-bold">${element.ar} Ft</h5>
-                    <a href="#" class="btn btn-secondary" id="kosarGomb">Kosárba</a>
+                    <button id="kosarGomb"><i class="bi bi-cart-plus"></i> Kosárba helyezés</button>
                 </div>
             </div>`
         cipokcardok.appendChild(card)
