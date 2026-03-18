@@ -33,9 +33,9 @@ async function cipokBetoltes() {
     }
 }
 
-function cipokmegjelenitese(){
+function cipokmegjelenitese() {
     cipokcardok.innerHTML = "";
-    
+
     szurescipok.forEach(element => {
         const card = document.createElement("div");
         // card.classList = "col-sm-12 col-md-6 col-lg-3"
@@ -58,36 +58,36 @@ function cipokmegjelenitese(){
     });
 
 
-    
 
 
 
 
-             document.querySelectorAll("#kosarGomb").forEach(element => {
-            element.addEventListener('click', (e) => {
-                const cipoid = parseInt(e.currentTarget.getAttribute('data-termek-id'));
-                kosarhozAdas(cipoid);
+
+    document.querySelectorAll("#kosarGomb").forEach(element => {
+        element.addEventListener('click', (e) => {
+            const cipoid = parseInt(e.currentTarget.getAttribute('data-termek-id'));
+            kosarhozAdas(cipoid);
         });
     });
 
-    
-}
-
-function alaplefutas(){
-    
-        
 
 }
 
+function alaplefutas() {
 
-document.addEventListener('DOMContentLoaded', () =>{
+
+
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
     cipokBetoltes();
     alaplefutas();
 })
 
 
 
-function kosarhozAdas(id){
+function kosarhozAdas(id) {
     const cipo = cipok.find(x => x.id === id)
     kosarcipok.push(cipo);
 }
