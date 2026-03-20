@@ -23,13 +23,60 @@ body{
     
 }
 
+/* Footer */
+
 footer{
-    background: rgb(158, 158, 158);
+    background: rgb(34, 34, 34);
     /* position: fixed; */
     width: 100%;
-    height: 200px;
+    height: auto;
     bottom: 0;
     display: flex;
+}
+
+footer h5{
+    color: white;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 27px;
+}
+
+footer p{
+    color: white;
+}
+
+footer img{
+    width: 120px;
+}
+
+.kapcsolat{
+    list-style-type: none;
+    font-size: 16px;
+    color: white;
+}
+
+.kapcsolat_li{
+    margin: 5px;
+}
+
+.oldalak{
+    list-style-type: none;
+    font-size: 16px;
+    color: white;
+}
+
+.oldalak:hover{
+    font-size: 22px;
+    transition: 0.5s;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+footer .col-md-3{
+    margin-bottom: 10px;
 }
 
 /* Főoldal */
