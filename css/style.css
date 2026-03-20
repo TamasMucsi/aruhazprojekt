@@ -68,3 +68,23 @@ footer{
 #kosarGomb:active{
     background-color: grey;
 }
+
+
+.main-logo{
+    height: 50px;
+    width: 50px;
+}
+
+#kosarTorlesGomb{
+    background-color: #fff;
+    color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    width: 18rem;
+    height: 2rem;
+    transition: background-color 0.5s;
+}
+#kosarTorlesGomb:hover{
+    background-color: red;
+    color: white;
+}
