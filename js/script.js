@@ -1,5 +1,3 @@
-// 1. JS - navbar, footer behúzás
-
 let cipok = [];
 let szurescipok = [];
 let kosarcipok = [];
@@ -58,15 +56,41 @@ function cipokmegjelenitese() {
     });
 
 
+
+    //kosarbol torles
+    document.querySelectorAll('#kosarTorlesGomb').forEach(element => {
+        element.addEventListener('click', (e) => {
+            const cipoId = parseInt(e.currentTarget.getAttribute('data-termekTorles-id'));
+            cipoKosarTorlese(cipoId)
+        });
+    });
+
+
+
+
 }
 
-function alaplefutas() { //ONCLICK SZAROK
+function alaplefutas() { 
+    
+    //ONCLICK SZAROK
     kosarmodalgomb.addEventListener('click', ()=>{
-        let kosarbody = document.getElementById("kosarBody");
-        kosarcipok.forEach(element => {
+        kosarMegjelenites();
+    })
+}
+
+
+function kosarMegjelenites() {
+    let kosarbody = document.getElementById("kosarBody");
+    kosarbody.innerHTML = ""; 
+
+    if (kosarcipok.length === 0) {
+        kosarbody.innerHTML = `<h2 class="text-center"><i class="bi bi-cart"></i> A kosarad üres.</h2>`;
+        return;
+    }
+
+    kosarcipok.forEach(element => {
         const card = document.createElement("div");
-        // card.classList = "col-sm-12 col-md-6 col-lg-3"
-        card.classList = "col-auto"
+        card.classList = "col-auto";
         card.innerHTML = `
         <div class="card h-100" style="width: 20rem;">
         <img src="${element.kep}" class="card-img-top" alt="${element.kep}">
@@ -78,12 +102,18 @@ function alaplefutas() { //ONCLICK SZAROK
                     <p class="card-text">Típus: ${element.tipus}</p>
 
                     <h5 class="fw-bold">${element.ar} Ft</h5>
-                    <button id="kosarTorlesGomb" data-termek-id="${element.id}"><i class="bi bi-cart-plus"></i>Termék törlése a kosárból</button>
+                    <button class="torles-gomb"  data-id="${element.id}"><i class="bi bi-x-octagon-fill"></i> Termék törlése a kosárból</button>
                 </div>
-                </div>`
-        kosarbody.appendChild(card)
+                </div>`;
+        kosarbody.appendChild(card);
     });
-    })
+
+    document.querySelectorAll('.torles-gomb').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const id = parseInt(e.currentTarget.getAttribute('data-id'));
+            cipoKosarTorlese(id);
+        });
+    });
 }
 
 
@@ -97,6 +127,18 @@ document.addEventListener('DOMContentLoaded', () => {
 function kosarhozAdas(id) {
     const cipo = cipok.find(x => x.id === id)
     kosarcipok.push(cipo);
+}
+
+
+function cipoKosarTorlese(id){
+
+    const elsoindexuelem = kosarcipok.findIndex(x => x.id === id);
+    if (elsoindexuelem !== -1) {
+        kosarcipok.splice(elsoindexuelem, 1);
+    }
+
+    kosarMegjelenites();
+    
 }
 
 
