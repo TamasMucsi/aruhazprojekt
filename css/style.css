@@ -83,7 +83,7 @@ footer{
     width: 50px;
 }
 
-#kosarTorlesGomb{
+.torles-gomb{
     background-color: #fff;
     color: red;
     border: 1px solid red;
@@ -92,7 +92,7 @@ footer{
     height: 2rem;
     transition: background-color 0.5s;
 }
-#kosarTorlesGomb:hover{
+.torles-gomb:hover{
     background-color: red;
     color: white;
 }
