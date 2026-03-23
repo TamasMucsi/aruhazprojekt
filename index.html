@@ -12,24 +12,136 @@
     
 <script src="js/script.js"></script>
 
-<navbar>
-  <script> 
-    includeHtml('navbar');
-  </script>
+
+<navbar id="js-navbar">
+        <script>
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("js-navbar").innerHTML = data;
+                })
+                .catch(error => console.error("Hiba a menü betöltődésekor!", error));
+        </script>
 </navbar>
-      
+
 
 <main class="container-fluid fooldaldiv">
     <p class="fooldalcim">Találd meg a stílusod – kényelmes cipők, verhetetlen árakon!</p>
 </main>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<section class="container my-5">
 
-<footer>
-  <script>
-    includeHtml('footer'); 
-  </script>
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Üdvözlünk a cipők világában</h2>
+        <p class="lead">
+            A cipő több mint egy egyszerű viselet – a stílusod része, amely elkísér a mindennapokban.
+        </p>
+    </div>
+
+    <hr class="my-5">
+
+    <div class="border rounded p-4 shadow-sm mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="https://imgcentauro-a.akamaihd.net/1200x1200/M17F2102A1.jpg" class="img-fluid rounded fooldalcipokep" alt="cipők">
+            </div>
+            <div class="col-md-6">
+                <h4 class="fw-semibold">Stílus és kényelem egy helyen</h4>
+                <p>
+                    Weboldalunk célja, hogy segítsen megtalálni a számodra tökéletes cipőt.
+                    Legyen szó sportos megjelenésről, elegáns alkalmakról vagy hétköznapi viseletről,
+                    nálunk mindenki megtalálhatja a hozzá illő darabot.
+                </p>
+                <p>
+                    A legújabb trendek és a klasszikus modellek ötvözésével biztosítjuk,
+                    hogy mindig magabiztosan léphess ki az utcára.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row text-center g-4 mb-5">
+        <div class="col-md-4">
+            <div class="p-4 shadow rounded h-100 bg-light">
+                <i class="bi bi-stars fs-1 mb-3"></i>
+                <h5>Minőség</h5>
+                <p>Kiváló anyagokból készült cipők, amelyek hosszú távon is kényelmesek.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="p-4 shadow rounded h-100 bg-light">
+                <i class="bi bi-bag fs-1 mb-3"></i>
+                <h5>Széles választék</h5>
+                <p>Sportos, elegáns és hétköznapi modellek egy helyen.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="p-4 shadow rounded h-100 bg-light">
+                <i class="bi bi-heart fs-1 mb-3"></i>
+                <h5>Kényelem</h5>
+                <p>Olyan cipők, amelyek egész napos viselet mellett is kényelmesek.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="text-center mb-5">
+        <h4 class="fw-semibold">Találd meg a hozzád illő darabot</h4>
+        <p>
+            Fedezd fel kínálatunkat, és válaszd ki azt a cipőt, amely legjobban tükrözi a stílusodat.
+            Lépj magabiztosan minden nap!
+        </p>
+    </div>
+
+<!-- Cipő típusok -->
+<div class="mt-5">
+
+    <div class="row justify-content-center text-center">
+
+        <div class="col-md-4 d-flex flex-column align-items-center">
+            <img src="img/9.jpg" class="cipokep rounded shadow-sm mb-3" alt="sportcipő">
+            <h5>Sportcipők</h5>
+            <p class="text-muted">
+                Könnyű, kényelmes és ideális aktív mindennapokhoz vagy edzéshez.
+            </p>
+        </div>
+
+        <div class="col-md-4 d-flex flex-column align-items-center">
+            <img src="img/10.jpg" class="cipokep rounded shadow-sm mb-3" alt="elegáns cipő">
+            <h5>Elegáns cipők</h5>
+            <p class="text-muted">
+                Tökéletes választás formális alkalmakra és kifinomult megjelenéshez.
+            </p>
+        </div>
+
+        <div class="col-md-4 d-flex flex-column align-items-center">
+            <img src="img/1.jpg" class="cipokep rounded shadow-sm mb-3" alt="utcai cipő">
+            <h5>Utcai cipők</h5>
+            <p class="text-muted">
+                Stílusos és kényelmes darabok a mindennapi viselethez.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+</section>
+
+
+<footer class="footer">
+        <script>
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector(".footer").innerHTML = data;
+                })
+                .catch(error => console.error("Hiba a menü betöltődésekor!", error));; 
+        </script>
 </footer>
+
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>    
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>

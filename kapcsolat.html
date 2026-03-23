@@ -12,18 +12,28 @@
 
 <script src="js/script.js"></script>    
 
-<navbar>
-  <script> 
-    includeHtml('navbar');
-  </script>
+<navbar id="js-navbar">
+        <script>
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("js-navbar").innerHTML = data;
+                })
+                .catch(error => console.error("Hiba a menü betöltődésekor!", error));
+        </script>
 </navbar>
 
 
 
-<footer>
-  <script>
-    includeHtml('footer'); 
-  </script>
+<footer class="footer">
+        <script>
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector(".footer").innerHTML = data;
+                })
+                .catch(error => console.error("Hiba a menü betöltődésekor!", error));; 
+        </script>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
