@@ -26,6 +26,7 @@ body{
 /* Footer */
 
 footer{
+    margin-top: 20px;
     background: rgb(34, 34, 34);
     /* position: fixed; */
     width: 100%;
