@@ -153,3 +153,17 @@ footer .col-md-3{
     background-color: red;
     color: white;
 }
+
+
+#kosarmodalgomb{
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 7px;
+    transition: background-color 0.5s;
+    background-color: #fff;
+}
+
+
+#kosarmodalgomb:hover{
+    background-color: lightgrey;
+}

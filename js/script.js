@@ -6,6 +6,7 @@ let kosarcipok = [];
 
 let kosarmodalgomb = document.getElementById("kosarmodalgomb");
 let cipokcardok = document.getElementById("cipokcardok");
+let kosarUritesGomb = document.getElementById("kosarUritesGomb");
 
 
 
@@ -76,6 +77,13 @@ function alaplefutas() {
     kosarmodalgomb.addEventListener('click', ()=>{
         kosarMegjelenites();
     })
+
+    kosarUritesGomb.addEventListener('click', ()=>{
+        osszesTorles();
+    })
+
+
+
 }
 
 
@@ -141,4 +149,20 @@ function cipoKosarTorlese(id){
     
 }
 
+
+function osszesTorles(){
+    if (kosarcipok.length === 0) {
+        alert("A kosarad üres, nincs mit törölni!!!");
+        return
+    }
+
+    if (confirm(`Biztosan ki szeretnéd üríteni a kosarad?`)) {
+        
+            kosarcipok = [];
+            szurtFilmek = [];
+            kosarMegjelenites();    
+        
+    }
+
+}
 
