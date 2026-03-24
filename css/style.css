@@ -115,6 +115,41 @@ footer .col-md-3{
     width: 500px;
 }
 
+/* Kapcsolat */
+
+.kapcsolatdiv{
+    background: rgba(255, 255, 255, 0.85); /* áttetsző kártya hatás */
+    border-radius: 15px;
+    padding: 40px 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    background-image: url("../img/kapcsolatkep.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.kapcsolath1, .kapcsolatp{
+    color: black;
+}
+
+.kapcsolatp{
+    font-size: 28px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+}
+.btn-secondary {
+    background-color: #383838;
+}
+
+.btn-secondary:hover {
+    background-color: #000000;
+}
+
+
+
 
 
 

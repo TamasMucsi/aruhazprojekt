@@ -13,27 +13,70 @@
 <script src="js/script.js"></script>    
 
 <navbar id="js-navbar">
-        <script>
-            fetch("navbar.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("js-navbar").innerHTML = data;
-                })
-                .catch(error => console.error("Hiba a menü betöltődésekor!", error));
-        </script>
+    <script>
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("js-navbar").innerHTML = data;
+            })
+            .catch(error => console.error("Hiba a menü betöltődésekor!", error));
+    </script>
 </navbar>
 
 
+<main class="container kapcsolatdiv">
+    <section class="text-center mb-5">
+        <h1 class="display-5 fw-bold kapcsolath1">Lépj velünk kapcsolatba!</h1>
+        <p class="lead kapcsolatp">Bármilyen kérdésed van, vagy segítségre van szükséged, írj nekünk az alábbi űrlap segítségével.</p>
+    </section>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm p-4">
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Név</label>
+                        <input type="text" class="form-control" id="name" placeholder="Add meg a nevedet" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email cím</label>
+                        <input type="email" class="form-control" id="email" placeholder="...@gmail.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Tárgy</label>
+                        <input type="text" class="form-control" id="subject" placeholder="Mi a kérdés tárgya?" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Üzenet</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Írd ide az üzeneted" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-secondary w-100">
+                        Küldés <i class="bi bi-send-fill ms-2"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Köszönjük az üzeneted! Hamarosan felvesszük veled a kapcsolatot.');
+        this.reset();
+    });
+</script>
 
 <footer class="footer">
-        <script>
-            fetch("footer.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.querySelector(".footer").innerHTML = data;
-                })
-                .catch(error => console.error("Hiba a menü betöltődésekor!", error));; 
-        </script>
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector(".footer").innerHTML = data;
+            })
+            .catch(error => console.error("Hiba a menü betöltődésekor!", error));;
+    </script>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
