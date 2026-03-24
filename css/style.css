@@ -7,7 +7,13 @@ body{
 /* Navbar */
 
 .navbar{
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.card{
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+
 }
 
 .nav-item{
@@ -26,6 +32,7 @@ body{
 /* Footer */
 
 footer{
+    margin-top: 20px;
     background: rgb(34, 34, 34);
     /* position: fixed; */
     width: 100%;
@@ -186,4 +193,18 @@ footer .col-md-3{
 .torles-gomb:hover{
     background-color: red;
     color: white;
+}
+
+
+#kosarmodalgomb{
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 7px;
+    transition: background-color 0.5s;
+    background-color: #fff;
+}
+
+
+#kosarmodalgomb:hover{
+    background-color: lightgrey;
 }
