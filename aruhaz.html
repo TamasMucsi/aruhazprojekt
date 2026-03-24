@@ -13,7 +13,7 @@
 <body>
     <navbar id="js-navbar">
         <script>
-            fetch("navbar.html")
+            fetch("navbarAruhaz.html")
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById("js-navbar").innerHTML = data;
@@ -22,8 +22,9 @@
         </script>
     </navbar>
 
-    <button id="kosarmodalgomb" class="ms-3 mb-3 mt-3" data-bs-target="#kosarModal" data-bs-toggle="modal"><i class="bi bi-cart"></i> Kosaram megtekintése</button>
-    <div class="main d-flex">
+    <button id="kosarmodalgomb" class="ms-3 mb-3 mt-3" data-bs-target="#kosarModal" data-bs-toggle="modal"><i
+            class="bi bi-cart kosaricon"></i> Kosaram megtekintése</button>
+    <div class="main d-flex mt-3">
         <div class="container-fluid w-75">
             <div class="row justify-content-center g-3" id="cipokcardok"></div>
         </div>
@@ -58,15 +59,115 @@
                 </div>
                 <div class="modal-body">
                     <div class="row d-flex justify-content-center g-5" id="kosarBody"></div>
-                    
+
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
-                    <button type="button" class="btn btn-primary" id="kosarUritesGomb">Kosár Kiürítése</button>
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Bezárás</button>
+                    <button type="button" class="btn btn-secondary" id="kosarUritesGomb">Kosár Kiürítése</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- ujtermekmodal -->
+
+
+
+    <div class="modal" tabindex="-1" id="ujtermekModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Új termék hozzáadása</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="ujtermekform">
+                        <div class="row">
+                            <div class="col-md-12 mb-2">
+                                <label for="ujMarka" class="form-label">Márka *</label>
+                                <input type="text" class="form-control" id="ujMarka" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-2">
+                                <label for="ujModell">Modell *</label>
+                                <input type="text" class="form-control" id="ujModell" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="ujMeret" class="form-label">Méret *</label>
+                                <input type="number" class="form-control" id="ujMeret" min="20" max="60" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="ujSzin" class="form-label">Szín *</label>
+                                <select class="form-select" id="ujSzin">
+                                    <option value="">Válassz színt...</option>
+                                    <option value="Fekete">Fekete</option>
+                                    <option value="Barna">Barna</option>
+                                    <option value="Sötétkék">Sötétkék</option>
+                                    <option value="Szürke">Szürke</option>
+                                    <option value="Fehér">Fehér</option>
+                                    <option value="Piros">Piros</option>
+                                    <option value="Ezüst">Ezüst</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="ujTipus" class="form-label">Típus: *</label>
+                                <select class="form-select" id="ujTipus">
+                                    <option value="">Válassz típust...</option>
+                                    <option value="Férfi">Férfi</option>
+                                    <option value="Nő">Nő</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="ujAr" class="form-label">Ár (Forint)*</label>
+                                <input type="number" class="form-control" id="ujAr" required></input>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ujKep" class="form-label">Kép URL címe:</label>
+                            <input type="url" class="form-control" id="ujKep" placeholder="https://...">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Bezárás</button>
+                    <button type="button" class="btn btn-secondary" id="ujMentesGomb">Mentés</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- keresesmodal -->
+    <div class="modal" id="keresesmodal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="bi bi-search"></i> Keresés márka szerint</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="form-label" class="form-label">Márka: </label>
+                        <input type="text" class="form-control" id="keresoinput" placeholder="Kezdd el írni a márkát, amire keresni szeretnél">
+                    </div>
+                    <div class="fst-italic">
+                        <span class="bi bi-info-square"></span> A megadott karakterek részleges egyezést keresnek az elérhető márkák között.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Bezárás</button>
+                    <button type="button" class="btn btn-secondary" id="keresesgomb">Keresés</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>

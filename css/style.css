@@ -162,14 +162,24 @@ footer .col-md-3{
 
 
 #kosarmodalgomb{
-    height: 40px;
+    height: 50px;
     border: 1px solid black;
     border-radius: 7px;
     transition: background-color 0.5s;
     background-color: #fff;
+    position: fixed;
+    z-index: 2;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+
 }
 
 
 #kosarmodalgomb:hover{
     background-color: lightgrey;
+
+}
+
+
+.ujtermekxd{
+    cursor: pointer;
 }

@@ -7,6 +7,10 @@ let kosarcipok = [];
 let kosarmodalgomb = document.getElementById("kosarmodalgomb");
 let cipokcardok = document.getElementById("cipokcardok");
 let kosarUritesGomb = document.getElementById("kosarUritesGomb");
+let ujMentesGomb = document.getElementById("ujMentesGomb");
+let ujtermekform = document.getElementById("ujtermekform");
+let keresoinput = document.getElementById("keresoinput")
+let keresesgomb = document.getElementById("keresesgomb")
 
 
 
@@ -33,7 +37,7 @@ function cipokmegjelenitese() {
         card.classList = "col-auto"
         card.innerHTML = `
         <div class="card h-100" style="width: 20rem;">
-        <img src="${element.kep}" class="card-img-top" alt="${element.kep}">
+        <img src="${element.kep ? element.kep : `../img/nincskep.jpg`}" class="card-img-top" alt="${element.kep}">
         <div class="card-body"></div>
         <div class="card-footer">
         <h4 class="card-title">${element.marka}</h4>
@@ -82,7 +86,20 @@ function alaplefutas() {
         osszesTorles();
     })
 
+    ujMentesGomb.addEventListener('click', ()=>{
+        ujCipoHozzaadas();
+    })
 
+    keresesgomb.addEventListener('click', ()=>{
+        kereses();
+    })
+
+    keresoinput.addEventListener('keypress',(x) =>{
+        if (x.key === "Enter") 
+        {
+        kereses();    
+        }
+    })
 
 }
 
@@ -101,7 +118,7 @@ function kosarMegjelenites() {
         card.classList = "col-auto";
         card.innerHTML = `
         <div class="card h-100" style="width: 20rem;">
-        <img src="${element.kep}" class="card-img-top" alt="${element.kep}">
+        <img src="${element.kep ? element.kep : `../img/nincskep.jpg`}" class="card-img-top" alt="${element.kep}">
         <div class="card-body"></div>
         <div class="card-footer">
         <h4 class="card-title">${element.marka}</h4>
@@ -159,10 +176,47 @@ function osszesTorles(){
     if (confirm(`Biztosan ki szeretnéd üríteni a kosarad?`)) {
         
             kosarcipok = [];
-            szurtFilmek = [];
+            szurescipok = [];
             kosarMegjelenites();    
         
     }
 
 }
 
+
+function ujCipoHozzaadas(){
+    if (!ujtermekform.checkValidity()) {
+        ujtermekform.reportValidity();
+        return;
+    }
+
+
+     const ujCipo = {
+        id: cipok.length > 0 ? Math.max(...cipok.map(f => f.id)) + 1: 1,
+        marka: document.getElementById('ujMarka').value,
+        modell: document.getElementById('ujModell').value,
+        szin: document.getElementById('ujSzin').value,
+        meret: parseInt(document.getElementById('ujMeret').value),
+        tipus: document.getElementById('ujTipus').value,
+        kep: document.getElementById('ujKep').value,
+        ar: parseInt(document.getElementById('ujAr').value),
+    };
+
+    cipok.push(ujCipo);
+    szurescipok = [...cipok];
+    cipokmegjelenitese();
+
+    const modal = bootstrap.Modal.getInstance(document.getElementById('ujtermekModal'));
+    modal.hide();
+    ujtermekform.reset();
+}
+
+
+function kereses(){
+    const markakereses = keresoinput.value.toLowerCase().trim();
+    szurescipok = cipok.filter(x => x.marka.toLowerCase().includes(markakereses));
+    cipokmegjelenitese()
+    const modal = bootstrap.Modal.getInstance(document.getElementById('keresesmodal'));
+    modal.hide();
+    keresoinput.value = "";
+}
