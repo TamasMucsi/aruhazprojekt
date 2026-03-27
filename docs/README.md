@@ -9,3 +9,7 @@
 ## Források
 - ChatGPT(szöveg)
 - Gemini (szöveg)
+
+## Használt webek
+- [Figma] (https://trello.com/b/Cm77UZlp/projekt)
+- [Trello] (https://www.figma.com/design/asEK6I5F1Gq7bx7g4Fnlcm/Web%C3%A1ruh%C3%A1z?node-id=0-1&p=f&t=GNABddkvSkGNdgl1-0)
