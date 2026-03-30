@@ -24,7 +24,9 @@ async function cipokBetoltes() {
         cipokmegjelenitese();
         kategoriakgeneralas();
     } catch (error) {
-        console.log('Hiba történt a cipők betöltése során!')
+        
+            console.log('Hiba történt a cipők betöltése során!')
+        
     }
 }
 
@@ -141,11 +143,13 @@ function kosarMegjelenites() {
     });
 }
 
-
-document.addEventListener('DOMContentLoaded', () => {
+if (kosarmodalgomb != null) {
+    document.addEventListener('DOMContentLoaded', () => {
     cipokBetoltes();
     alaplefutas();
 })
+}
+
 
 
 
