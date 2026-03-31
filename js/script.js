@@ -33,7 +33,7 @@ async function cipokBetoltes() {
 function cipokmegjelenitese() {
     cipokcardok.innerHTML = "";
 if (szurescipok.length === 0) {
-    cipokcardok.innerHTML = `<span class="ohmxdxxd">Nincs megjeleníthető cipő!!</span>`
+    cipokcardok.innerHTML = `<span class="ohmxdxxd">Nincsen megjeleníthető cipő!!</span>`
    
 }
     
