@@ -25,15 +25,20 @@ async function cipokBetoltes() {
         kategoriakgeneralas();
     } catch (error) {
         
-            console.log('Hiba történt a cipők betöltése során!')
+        
         
     }
 }
 
 function cipokmegjelenitese() {
     cipokcardok.innerHTML = "";
-
-    szurescipok.forEach(element => {
+if (szurescipok.length === 0) {
+    cipokcardok.innerHTML = `<span class="ohmxdxxd">Nincs megjeleníthető cipő!!</span>`
+   
+}
+    
+else{
+     szurescipok.forEach(element => {
         const card = document.createElement("div");
         // card.classList = "col-sm-12 col-md-6 col-lg-3"
         card.classList = "col-auto"
@@ -53,6 +58,7 @@ function cipokmegjelenitese() {
                 </div>`
         cipokcardok.appendChild(card)
     });
+}
 
     //Kosarhoz adas
     document.querySelectorAll("#kosarGomb").forEach(element => {
