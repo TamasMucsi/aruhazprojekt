@@ -24,25 +24,25 @@ async function cipokBetoltes() {
         cipokmegjelenitese();
         kategoriakgeneralas();
     } catch (error) {
-        
-        
-        
+
+
+
     }
 }
 
 function cipokmegjelenitese() {
     cipokcardok.innerHTML = "";
-if (szurescipok.length === 0) {
-    cipokcardok.innerHTML = `<span class="ohmxdxxd">Nincsen megjeleníthető cipő!!</span>`
-   
-}
-    
-else{
-     szurescipok.forEach(element => {
-        const card = document.createElement("div");
-        // card.classList = "col-sm-12 col-md-6 col-lg-3"
-        card.classList = "col-auto"
-        card.innerHTML = `
+    if (szurescipok.length === 0) {
+        cipokcardok.innerHTML = `<span class="ohmxdxxd">Nincsen megjeleníthető cipő!!</span>`
+
+    }
+
+    else {
+        szurescipok.forEach(element => {
+            const card = document.createElement("div");
+            // card.classList = "col-sm-12 col-md-6 col-lg-3"
+            card.classList = "col-auto"
+            card.innerHTML = `
         <div class="card h-100" style="width: 20rem;">
         <img src="${element.kep ? element.kep : `../img/nincskep.jpg`}" class="card-img-top" alt="${element.kep}">
         <div class="card-body"></div>
@@ -56,9 +56,9 @@ else{
                     <button id="kosarGomb" data-termek-id="${element.id}"><i class="bi bi-cart-plus"></i> Kosárba helyezés</button>
                 </div>
                 </div>`
-        cipokcardok.appendChild(card)
-    });
-}
+            cipokcardok.appendChild(card)
+        });
+    }
 
     //Kosarhoz adas
     document.querySelectorAll("#kosarGomb").forEach(element => {
@@ -83,29 +83,28 @@ else{
 
 }
 
-function alaplefutas() { 
-    
+function alaplefutas() {
+
     //ONCLICK SZAROK
-    kosarmodalgomb.addEventListener('click', ()=>{
+    kosarmodalgomb.addEventListener('click', () => {
         kosarMegjelenites();
     })
 
-    kosarUritesGomb.addEventListener('click', ()=>{
+    kosarUritesGomb.addEventListener('click', () => {
         osszesTorles();
     })
 
-    ujMentesGomb.addEventListener('click', ()=>{
+    ujMentesGomb.addEventListener('click', () => {
         ujCipoHozzaadas();
     })
 
-    keresesgomb.addEventListener('click', ()=>{
+    keresesgomb.addEventListener('click', () => {
         kereses();
     })
 
-    keresoinput.addEventListener('keypress',(x) =>{
-        if (x.key === "Enter") 
-        {
-        kereses();    
+    keresoinput.addEventListener('keypress', (x) => {
+        if (x.key === "Enter") {
+            kereses();
         }
     })
 
@@ -114,7 +113,7 @@ function alaplefutas() {
 
 function kosarMegjelenites() {
     let kosarbody = document.getElementById("kosarBody");
-    kosarbody.innerHTML = ""; 
+    kosarbody.innerHTML = "";
 
     if (kosarcipok.length === 0) {
         kosarbody.innerHTML = `<h2 class="text-center"><i class="bi bi-cart"></i> A kosarad üres.</h2>`;
@@ -151,9 +150,9 @@ function kosarMegjelenites() {
 
 if (kosarmodalgomb != null) {
     document.addEventListener('DOMContentLoaded', () => {
-    cipokBetoltes();
-    alaplefutas();
-})
+        cipokBetoltes();
+        alaplefutas();
+    })
 }
 
 
@@ -165,7 +164,7 @@ function kosarhozAdas(id) {
 }
 
 
-function cipoKosarTorlese(id){
+function cipoKosarTorlese(id) {
 
     const elsoindexuelem = kosarcipok.findIndex(x => x.id === id);
     if (elsoindexuelem !== -1) {
@@ -173,36 +172,36 @@ function cipoKosarTorlese(id){
     }
 
     kosarMegjelenites();
-    
+
 }
 
 
-function osszesTorles(){
+function osszesTorles() {
     if (kosarcipok.length === 0) {
         alert("A kosarad üres, nincs mit törölni!!!");
         return
     }
 
     if (confirm(`Biztosan ki szeretnéd üríteni a kosarad?`)) {
-        
-            kosarcipok = [];
-            szurescipok = [];
-            kosarMegjelenites();    
-        
+
+        kosarcipok = [];
+        szurescipok = [];
+        kosarMegjelenites();
+
     }
 
 }
 
 
-function ujCipoHozzaadas(){
+function ujCipoHozzaadas() {
     if (!ujtermekform.checkValidity()) {
         ujtermekform.reportValidity();
         return;
     }
 
 
-     const ujCipo = {
-        id: cipok.length > 0 ? Math.max(...cipok.map(f => f.id)) + 1: 1,
+    const ujCipo = {
+        id: cipok.length > 0 ? Math.max(...cipok.map(f => f.id)) + 1 : 1,
         marka: document.getElementById('ujMarka').value,
         modell: document.getElementById('ujModell').value,
         szin: document.getElementById('ujSzin').value,
@@ -222,7 +221,7 @@ function ujCipoHozzaadas(){
 }
 
 
-function kereses(){
+function kereses() {
     const markakereses = keresoinput.value.toLowerCase().trim();
     szurescipok = cipok.filter(x => x.marka.toLowerCase().includes(markakereses));
     cipokmegjelenitese()
